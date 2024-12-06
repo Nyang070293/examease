@@ -484,7 +484,7 @@
             success: function(response) {
                 let data = JSON.parse(response);
                 console.log(data)
-                if(data == null || data.code[0]==null){                     
+                if(data == null || data.code[0]==null || data.code[0] < 0){                     
                         document.body.style.cursor = "default";
                         $('#loading').attr('style','display: none;')
                     swal({
